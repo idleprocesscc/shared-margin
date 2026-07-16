@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "shared-margin": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/server/index.mjs"]
+    },
+    "co-reading": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/components/co-reading-mcp/src/server.js"],
+      "env": {
+        "READING_MCP_DATA_DIR": "${HOME}/.shared-margin/reading"
+      }
+    },
+    "film-matinee": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/.venv/bin/python3",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/components/film-matinee/tools/film_matinee_reader_mcp.py"]
+    }
+  }
+}

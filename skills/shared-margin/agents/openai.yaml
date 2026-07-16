@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shared Margin"
+  short_description: "Read books and watch films together with GPT-5.6"
+  default_prompt: "Use $shared-margin to open a book or film and experience it with me one moment at a time."

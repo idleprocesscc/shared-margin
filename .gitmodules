@@ -1,0 +1,6 @@
+[submodule "components/co-reading-mcp"]
+	path = components/co-reading-mcp
+	url = https://github.com/idleprocesscc/co-reading-mcp.git
+[submodule "components/film-matinee"]
+	path = components/film-matinee
+	url = https://github.com/idleprocesscc/film-matinee.git
