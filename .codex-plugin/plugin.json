@@ -1,6 +1,6 @@
 {
   "name": "shared-margin",
-  "version": "0.1.0",
+  "version": "0.1.0+codex.20260716080943",
   "description": "A Codex-native room for reading books and watching films together, one shared moment at a time.",
   "author": {
     "name": "Koshi",
@@ -9,7 +9,14 @@
   "homepage": "https://github.com/idleprocesscc/shared-margin",
   "repository": "https://github.com/idleprocesscc/shared-margin",
   "license": "MIT",
-  "keywords": ["codex", "gpt-5.6", "reading", "film", "mcp", "annotations"],
+  "keywords": [
+    "codex",
+    "gpt-5.6",
+    "reading",
+    "film",
+    "mcp",
+    "annotations"
+  ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Shared Margin",
@@ -17,7 +24,11 @@
     "longDescription": "Shared Margin lets a human and GPT-5.6 move through a book or film linearly, pause at the same passage or scene, exchange anchored notes, and keep a durable trail of the moments that mattered.",
     "developerName": "Koshi",
     "category": "Lifestyle",
-    "capabilities": ["Interactive", "Read", "Write"],
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
     "defaultPrompt": [
       "Open a book and read it with me one passage at a time.",
       "Watch a film with me and pause when something catches you.",

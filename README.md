@@ -59,6 +59,10 @@ Human ↔ GPT-5.6/Codex ─┤
 
 The media components retain their own progress and annotations. Shared Margin adds the common session vocabulary—source, anchor, two distinct voices, an open question—and a place where moments from different media can sit beside each other.
 
+## Early user signal
+
+The two original Xiaohongshu project posts reached 8,273 combined views, 1,081 likes, 1,184 saves, and 133 comments. More importantly, one commenter described watching through Film Matinee with her own Claude, said the shared experience moved her deeply, and reported using it intensely enough to exhaust two sessions in about 40 minutes. Shared Margin turns that accidental proof—people want to experience media *with* an AI, not merely ask it for a summary—into one deliberate Codex workflow.
+
 ## MCP tools
 
 - `shared_margin_begin`
@@ -96,4 +100,3 @@ Shared Margin is local-first. Source books and films remain in their component d
 ## License
 
 Shared Margin is MIT licensed. The two included components remain under their own MIT licenses and histories.
-
