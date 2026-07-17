@@ -1,0 +1,15 @@
+Books have margins. Films have pauses. Shared Margin began with a simple frustration: when I read or watch something with an AI, a summary is usually the least interesting part. I want to know what caught its attention, and I want it to remember what caught mine.
+
+Before Build Week, I had built two separate open-source tools. Co-Reading MCP turns books into durable, annotated reading chunks. Film Matinee turns films into linear visual sheets with subtitle sidecars and time-anchored notes. They worked, but they lived in different rooms.
+
+During Build Week, I used Codex and GPT-5.6 to join them into one installable plugin called Shared Margin. The new layer adds a common data model, a spoiler-safe Codex skill, five MCP tools, a local viewer, and Markdown export. The old projects remain disclosed and pinned as submodules; the unifying workflow is the new work.
+
+Here is the original demo running locally. A session can mix books and films, but every moment keeps an exact anchor: a passage in a book, or a timestamp and cut in a film. Human notes and GPT-5.6 observations stay separate. The system never flattens them into one synthetic voice. Each card can also keep an open question, because sometimes the best part of reading together is what neither reader has resolved yet.
+
+The workflow is deliberately small. Begin a session. Capture only the moments that genuinely catch someone. Revisit the trail. Finish when the experience is over. Export it as readable Markdown. Codex routes book moments through Co-Reading MCP and film moments through Film Matinee, while Shared Margin preserves the common trail.
+
+GPT-5.6 helped me design the shared schema, implement and test the MCP server, shape the plugin workflow, and turn the trail into a quiet visual object. The project is local-first, uses an original demo, and does not publish copyrighted books, subtitles, frames, or music.
+
+There was already a real signal behind the idea. The two original project posts reached more than eight thousand combined views, with over one thousand likes and saves. One person told me she watched through Film Matinee with her own Claude and was moved enough to keep going through two sessions in about forty minutes.
+
+Shared Margin is for people who do not want AI to explain art from a distance. They want company inside the moment. Books have margins. Films have pauses. Now Codex can meet you in both.

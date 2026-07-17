@@ -77,6 +77,12 @@ The plugin also exposes the tools from Co-Reading MCP and Film Matinee when the 
 
 Shared Margin was created during the July 13–21, 2026 submission period with Codex and GPT-5.6.
 
+### How Codex and GPT-5.6 were used
+
+Codex was the working environment for the Build Week extension, not a one-off code generator. GPT-5.6 helped turn the two existing media adapters into one shared-attention model; design the common moment schema; implement the five-tool MCP server, spoiler-safe skill, viewer, export, and validation scripts; and test a fresh clone with all three MCP servers initializing. The human author supplied the original co-reading/co-watching practice, selected what the unified product should preserve, reviewed the resulting behavior, and provided the real-world user signal behind the submission.
+
+The reproducible English demo-video script and renderer live in [`submission/`](submission/). The video uses only the original built-in demo and the live local viewer.
+
 ### Pre-existing, disclosed components
 
 - `co-reading-mcp`: book import, chunk reading, durable progress, passage annotations, and shared-margin cards
