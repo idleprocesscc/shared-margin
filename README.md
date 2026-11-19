@@ -43,6 +43,32 @@ npm run demo
 
 Runtime data defaults to `~/.shared-margin`. Override it with `SHARED_MARGIN_DATA_DIR`.
 
+### Browser regression tests
+
+On Linux/macOS, clone with `--recurse-submodules`, install Node.js 20+, Python
+3.10+ and ffmpeg (including ffprobe), then run:
+
+```bash
+./scripts/setup.sh
+npm ci
+npx playwright install --with-deps chromium
+npm run test:e2e
+```
+
+The headless Chromium suite covers video playback/pause/seek and subtitle sync,
+Film Matinee sheet navigation and shared notes/replies, co-reading chapters and
+progress, and the combined moment trail. It generates an original eight-second
+film and subtitles, copies the sample book, and starts isolated local services on
+available ports. All fixture data lives in a temporary directory removed at
+teardown; your real reading/film/trail data is not used. The repository's `.venv`
+Python is required. No media downloads, model credentials, or running Codex are
+needed.
+
+Screenshots and videos for every test are retained under `test-results/`; open
+`playwright-report/index.html` with `npx playwright show-report`. CI runs on pushes
+and pull requests and uploads both directories even when tests fail. Traces are
+recorded on the first retry in CI.
+
 ## Architecture
 
 ```text

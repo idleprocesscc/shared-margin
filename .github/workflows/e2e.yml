@@ -1,0 +1,39 @@
+name: Browser regression tests
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: ./scripts/setup.sh
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run smoke
+      - run: npm run test:e2e
+      - name: Upload browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-results
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
+          if-no-files-found: warn
