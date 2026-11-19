@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Film Matinee playback regression harness</title>
+  <link rel="stylesheet" href="/film/film-matinee-player.css">
+</head>
+<body>
+  <h1>Film Matinee playback</h1>
+  <p>Eight-second synthetic film with two subtitle cues.</p>
+  <button id="open">Play fixture</button>
+  <p id="state" role="status">Not started</p>
+  <script type="module">
+    import { filmMatineePlayer } from "/film/film-matinee-player.js";
+    const baseUrl = new URLSearchParams(location.search).get("stream");
+    filmMatineePlayer.init({ baseUrl });
+    document.querySelector("video").muted = true;
+    filmMatineePlayer.subscribe((state) => {
+      const output = document.querySelector("#state");
+      output.textContent = `${state.playing ? "Playing" : "Paused"} at ${state.ts.toFixed(2)}s`;
+      output.dataset.time = state.ts;
+    });
+    document.querySelector("#open").onclick = () => filmMatineePlayer.open("Fixture", "Synthetic fixture");
+  </script>
+</body>
+</html>

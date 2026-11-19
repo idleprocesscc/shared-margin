@@ -13,6 +13,10 @@
     "viewer": "node scripts/viewer.mjs",
     "demo": "node scripts/seed-demo.mjs && node scripts/viewer.mjs",
     "smoke": "node scripts/smoke.mjs",
-    "check:components": "node scripts/check-components.mjs"
+    "check:components": "node scripts/check-components.mjs",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
   }
 }

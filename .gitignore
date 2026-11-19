@@ -6,3 +6,5 @@ exports/
 .DS_Store
 node_modules/
 *.log
+playwright-report/
+test-results/
